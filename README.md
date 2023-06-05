@@ -1,4 +1,4 @@
-# [DE-Kursname hier eintragen]
+# Go lernen
 
 Dies ist das Repository für den **LinkedIn Learning** Kurs `[COURSENAME]`. Den gesamten Kurs finden Sie auf [LinkedIn Learning][lil-course-url].
 
@@ -51,9 +51,9 @@ Dieses Problem lösen Sie wie folgt:
 
 ### Autor
 
-**[Name hier eintragen]**
+**Jan Stamer**
 
-_[Berufsbezeichnung hier eintragen]_
+_Leading Software Developer_
 
 Sehen Sie sich andere Kurse des Autors auf [LinkedIn Learning](https://www.linkedin.com/learning/instructors/name_des_autors) an.
 
