@@ -20,6 +20,7 @@ func (c Congressman) bribe(amount float64) error {
 		return fmt.Errorf("%v is not corrupt", c.Name)
 	}
 
+	// Fehler weitergeben
 	err := transferMoney(amount)
 	if err != nil {
 		// Wrap error mit %w
