@@ -12,10 +12,10 @@ func main() {
 	// Reader erstellen
 	r := strings.NewReader(jsonBody)
 
-	var j map[string]string
+	var jsonMap map[string]string
 
 	// JSON per Reader einlesen
-	json.NewDecoder(r).Decode(&j)
+	json.NewDecoder(r).Decode(&jsonMap)
 
-	fmt.Println(j)
+	fmt.Println(jsonMap)
 }
