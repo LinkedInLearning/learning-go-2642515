@@ -6,22 +6,27 @@ import (
 )
 
 func main() {
-	// 1. Channel erzeugen
-	money := make(chan int)
+	account1 := make(chan int)
+	account2 := make(chan int)
 
 	go func() {
-		// 3. Select auf 2 Channels
-		select {
-		case amount := <-money:
-			fmt.Println("Received", amount, "$!")
-		case <-time.After(1 * time.Second):
-			fmt.Println("Got nothing ...!")
-		}
+		time.Sleep(1 * time.Second)
+		account1 <- 1000
 	}()
 
-	// Kein Send an Channel money
+	go func() {
+		time.Sleep(2 * time.Second)
+		account2 <- 2000
+	}()
 
-	// 2. Warten
-	time.Sleep(2 * time.Second)
-
+	for i := 0; i < 2; i++ {
+		select {
+		case amount1 := <-account1:
+			fmt.Println("Received", amount1, "$ on account 1!")
+		case amount2 := <-account2:
+			fmt.Println("Received", amount2, "$ on account 2!")
+		case <-time.After(10 * time.Second):
+			fmt.Println("Got nothing ...!")
+		}
+	}
 }
