@@ -3,7 +3,7 @@
 
 ## Ihr erstes Go Projekt mit Modulen und Packages
 
-Go Modul erstellen mit `go mod init linkedin.com/gopro`.
+Go Modul erstellen mit `go mod init linkedin.com/golernen`.
 
 
 ## Mit den Go Tools arbeiten
@@ -21,6 +21,7 @@ $ go build -o app .    # Code kompilieren mit Binary Output app
 ```bash
 $ go fmt main.go   # Eine Datei formatieren
 $ go fmt .         # Alle Dateien des aktuelle Verzeichnisses formatieren
+```
 
 ### 3. Go Doc
 

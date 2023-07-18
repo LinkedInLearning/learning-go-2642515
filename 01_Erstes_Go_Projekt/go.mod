@@ -1,3 +1,3 @@
-module linkedin.com/gopro
+module linkedin.com/golernen
 
 go 1.20
