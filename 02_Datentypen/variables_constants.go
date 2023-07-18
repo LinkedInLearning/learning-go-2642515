@@ -9,12 +9,6 @@ const greetingPart1 = "Hello"
 var aPackageVar string = "?"
 
 func main() {
-	// -- Konstanten
-
-	// Lokale Konstante
-	const greetingPart2 = "Gopher"
-	fmt.Println("Konstanten:", greetingPart1, greetingPart2)
-
 	// -- Variablen
 
 	// Deklaration und Zuweisung in langer Form
@@ -28,4 +22,10 @@ func main() {
 	s3 = "and yet another" // Zuweisung des Werts
 
 	fmt.Println("Variablen:", s1, s2, s3)
+
+	// -- Konstanten
+
+	// Lokale Konstante
+	const greetingPart2 = "Gopher"
+	fmt.Println("Konstanten:", greetingPart1, greetingPart2)
 }
