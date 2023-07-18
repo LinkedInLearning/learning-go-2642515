@@ -3,10 +3,12 @@ package main
 import "fmt"
 
 func main() {
+	// -- If/Else
+
 	// Einfaches if
 	president := "Walker"
-	if "Frank" != president {
-		fmt.Println("Frank is not President (yet).")
+	if "Underwood" != president {
+		fmt.Println("Underwood is not President (yet).")
 	}
 
 	// If mit else

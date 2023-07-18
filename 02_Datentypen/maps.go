@@ -14,7 +14,7 @@ func main() {
 	fmt.Println("Last Names:", lastNames)
 	fmt.Println("Last Name of Frank:", lastNames["Frank"])
 
-	// Map leer initialisieren
+	// Map mit make initialisieren
 	var age = make(map[string]int)
 	age["Frank"] = 52
 	age["Zoe"] = 28

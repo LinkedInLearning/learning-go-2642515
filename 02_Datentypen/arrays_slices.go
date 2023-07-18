@@ -4,25 +4,27 @@ import "fmt"
 
 func main() {
 	// -- Arrays
-	var finishedSeasons = [6]int{1, 2, 3, 4, 5, 99}
-	finishedSeasons[5] = 6
-	names := [2]string{"Zoe", "Frank"}
+	names := [2]string{"Zoe", "?"}
+	names[1] = "Frank"
 
-	fmt.Println(finishedSeasons)
 	fmt.Println(names)
 
 	// -- Slices
+
+	// Slice mit make intialisieren
 	mainCharacters := make([]string, 2)
-	mainCharacters[0] = "Frank Underwood"
-	mainCharacters[1] = "Clair Underwood"
+	mainCharacters[0] = "Frank"
+	mainCharacters[1] = "Clair"
 
 	fmt.Println("Main Characters:", mainCharacters)
 
-	supportingCharacters := []string{"Freddy Hayes", "Donald Blythe"}
+	// Slice mit Werten initialisieren
+	supportingCharacters := []string{"Freddy", "Donald"}
 	fmt.Printf("supportingCharacters = %v\n", supportingCharacters)
 	fmt.Printf("length = %d\n", len(supportingCharacters))
 	fmt.Printf("capacity = %d\n", cap(supportingCharacters))
 
+	// Neues Element an Slice anhängen
 	supportingCharacters = append(supportingCharacters, "Hector Mendoza", "Nancy Kaufberger")
 
 	fmt.Println("Featured Parts:", supportingCharacters)
