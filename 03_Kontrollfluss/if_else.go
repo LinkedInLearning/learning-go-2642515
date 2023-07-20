@@ -7,7 +7,7 @@ func main() {
 
 	// Einfaches if
 	president := "Walker"
-	if "Underwood" != president {
+	if president != "Underwood" { {
 		fmt.Println("Underwood is not President (yet).")
 	}
 

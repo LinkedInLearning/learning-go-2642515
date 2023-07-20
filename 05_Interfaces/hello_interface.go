@@ -2,15 +2,21 @@ package main
 
 import "fmt"
 
+type Congressman struct {
+	Name string
+}
+
+type Enemy struct{}
+
 // Interface definieren
 type Greeter interface {
 	greet()
 }
 
 // Interface nutzen
-func passBy(c1 Greeter, c2 Greeter) {
-	c1.greet()
-	c2.greet()
+func passBy(g1 Greeter, g2 Greeter) {
+	g1.greet()
+	g2.greet()
 }
 
 func main() {
@@ -19,16 +25,10 @@ func main() {
 	passBy(c, e)
 }
 
-type Congressman struct {
-	Name string
-}
-
 // Interface Implementierung 1
 func (c Congressman) greet() {
 	fmt.Println("Hello", c.Name)
 }
-
-type Enemy struct{}
 
 // Interface Implementierung 2
 func (e Enemy) greet() {

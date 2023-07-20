@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-// Einfaches Struct
+// Normales Struct
 type Congressman struct {
 	salary int    // Private Property
 	Name   string // Öffentliche Property

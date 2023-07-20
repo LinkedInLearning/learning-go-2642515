@@ -3,6 +3,8 @@ package main
 import "fmt"
 
 func main() {
+	//-- Das leere Interface
+
 	var i interface{} = "Hello"
 
 	//  Type Assertion ohne Prüfung

@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"html/template"
+	"log"
 	"net/http"
 
 	"github.com/jboursiquot/go-proverbs"
@@ -19,7 +20,7 @@ func HandleProverbPage(w http.ResponseWriter, r *http.Request) {
 		`<html>
 		  <head></head>
 		  <body>
-		  	<h1><a href="{{.Link}}">{{.Saying}}</a></h1>
+		  	<h1>Your Proverb: <a href="{{.Link}}">{{.Saying}}</a></h1>
 		  </body>
 		 </html>`,
 	)
@@ -41,12 +42,22 @@ func HandleProverbJson(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	// -- HTML Seite für Proverbs
 	http.HandleFunc("/", HandleProverbPage)
 
+	//-- Plain Text Endpunkt
 	http.HandleFunc("/text", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, proverbs.Random().Saying)
+		_, err := fmt.Fprintf(w, proverbs.Random().Saying)
+		if err != nil {
+			http.Error(w, "oops, that went wrong", http.StatusInternalServerError)
+		}
 	})
 
+	//-- REST API JSON Endpunkt
 	http.HandleFunc("/api", HandleProverbJson)
-	http.ListenAndServe(":8080", nil)
+
+	err := http.ListenAndServe(":8000", nil)
+	if err != nil {
+		log.Fatal(err)
+	}
 }

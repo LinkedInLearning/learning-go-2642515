@@ -6,7 +6,7 @@ BINARY = "proserve"
 fmt:
 	go fmt .
 
-build:
+build: clean
 	go build -o $(BINARY) .
 
 run:

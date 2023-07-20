@@ -6,8 +6,8 @@ import (
 
 // Einfaches Struct
 type Congressman struct {
-	salary int    // Private Property
-	Name   string // Öffentliche Property
+	salary int    // Privates Feld
+	Name   string // Öffentliches Feld
 }
 
 func main() {

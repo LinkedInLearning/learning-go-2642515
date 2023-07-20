@@ -10,9 +10,11 @@ func runIt(f func()) {
 }
 
 func main() {
+	//-- Anonyme Funktionen
+
 	// Anonyme Funktion definieren + ausführen
 	func() {
-		fmt.Print("Hello ")
+		fmt.Print("Hello LinkedIn!")
 	}()
 
 	// Anonyme Funktion als Variable/Parameter
@@ -21,7 +23,7 @@ func main() {
 	}
 	runIt(f)
 
-	// Aononye HTTP Handler Function
+	// Anonyme HTTP Handler Function
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte("Hello Gopher Web!"))
 	})

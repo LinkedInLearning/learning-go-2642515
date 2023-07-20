@@ -17,5 +17,6 @@ func helloDeferWithPanic() {
 }
 
 func main() {
+	//-- Verzögerte Auführung mit dever
 	helloDefer()
 }

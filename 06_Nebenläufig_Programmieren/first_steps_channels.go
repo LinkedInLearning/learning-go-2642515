@@ -3,6 +3,8 @@ package main
 import "fmt"
 
 func main() {
+	//-- Goroutinen und Channels
+
 	// 1. Channel erzeugen
 	money := make(chan int)
 
@@ -12,6 +14,6 @@ func main() {
 		fmt.Println("Received", amount, "$!")
 	}()
 
-	// 3. Send an Channel money
+	// 2. Send an Channel money
 	money <- 2000
 }

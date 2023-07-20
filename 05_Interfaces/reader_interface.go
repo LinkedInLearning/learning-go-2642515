@@ -7,6 +7,7 @@ import (
 )
 
 func main() {
+	// -- Mit dem io.Reader Interface JSON verarbeiten
 	const jsonBody = `{ "message": "Hello Reader!" }`
 
 	// Reader erstellen
